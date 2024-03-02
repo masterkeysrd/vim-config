@@ -44,3 +44,12 @@ if ! [ -d $vim_plugged ]; then
   echo "=> Creating $vim_plugged directory"
   mkdir $vim_plugged
 fi 
+
+echo "=> Downloading molokai colorscheme"
+curl -o- https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim > $vim_colors/molokai.vim
+echo ""
+
+echo "=> Downloading vim-plug"
+curl -fLo $vim_autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+echo ""
+
